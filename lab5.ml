@@ -145,7 +145,7 @@ exception Invalid_color of string ;;
 let validated_rgb (c : color) : color = 
   let bad (x : int) : bool = (x < 0 || x > 255) in
   match c with
-  | Simple x -> Simple c
+  | Simple x -> c
   | RGB (r, g, b) ->
     if bad r then raise (Invalid_color "bad red channel")
     else if bad g then raise (Invalid_color "bad green channel")
