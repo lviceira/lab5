@@ -182,7 +182,7 @@ below are some other values you might find helpful.
 
 let convert_to_rgb (c : color) : int * int * int = 
   match c with
-  | RGB (r, g, b) -> make_color (r, g, b) ;;
+  | RGB (r, g, b) -> make_color (r, g, b)
   | Simple x ->
     match x with
     | Red ->     (255, 0, 0)
